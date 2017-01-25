@@ -96,6 +96,7 @@ Is API consumer facing subnet exposing API Gateway listeners expecting to take A
 - Auto Scaling Launch configuration should point to AMI with pre-installed Axway Software and init.d scripts 
 - Cooldown and healthcheck grace period should be greater than the time it takes the API Gateway to come online which should be equal to sum of ' Time for Ec2 instance creation' + 'Time taken for scripts execution' + 'Time taken for instance to be added in service to Elastic load balancer'
 - Auto Scaling triggers should add or delete one node at a time.  Adding or deleting multiple nodes during auto scaling might lead to an iterim inconsistency of domain.
+- During Scaling activities there should be a time lag between two scaling activities(e.g scale up followed by another scale up, or any other combination of  scale up and or scale down) and the time lag should be higher than cool down period described in second point.   
 - When Launching the Auto scaling group **you should always start with min < max**
 - Healthcheck on instances created by Auto Scaling group should be based on ELB healthcheck
 ```
