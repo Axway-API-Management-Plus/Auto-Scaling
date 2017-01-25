@@ -17,19 +17,22 @@ do_status() {
 }
 
 do_start() {
-		cd /tmp
-		wget -q https://s3.amazonaws.com/admin-node-manager/scripts/common_variables.sh
-		chmod 777 common_variables.sh
-		wget -q https://s3.amazonaws.com/admin-node-manager/scripts/script_install_adminnodemanager.sh
+                touch /var/lock/subsys/ANMConf
+                cd /tmp
+                rm -fr /tmp/*
+                wget -q https://s3.amazonaws.com/admin-node-manager/scripts/common_variables.sh
+                chmod 777 common_variables.sh
+                wget -q https://s3.amazonaws.com/admin-node-manager/scripts/script_install_adminnodemanager.sh
                 chmod 777 script_install_adminnodemanager.sh
-		wget -q https://s3.amazonaws.com/admin-node-manager/scripts/script_uninstall_adminnodemanager.sh
+                wget -q https://s3.amazonaws.com/admin-node-manager/scripts/script_uninstall_adminnodemanager.sh
                 chmod 777 script_uninstall_adminnodemanager.sh
-		#. $(dirname $0)/script_install_adminnodemanager.sh
-		./script_install_adminnodemanager.sh
+                #. $(dirname $0)/script_install_adminnodemanager.sh
+                ./script_install_adminnodemanager.sh
 }
 do_stop() {
-		cd /tmp		
-		./script_uninstall_adminnodemanager.sh
+                rm -f /var/lock/subsys/ANMConf
+                cd /tmp
+                ./script_uninstall_adminnodemanager.sh
 }
 
 

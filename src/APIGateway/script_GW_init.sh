@@ -17,6 +17,7 @@ do_status() {
 }
 
 do_start() {
+               touch /var/lock/subsys/GWConf
                 cd /tmp
                 rm -fr /tmp/*
                 wget -q https://s3.amazonaws.com/admin-node-manager/scripts/common_variables.sh
@@ -29,6 +30,7 @@ do_start() {
                 ./script_install_apigateway.sh
 }
 do_stop() {
+                rm -f /var/lock/subsys/GWConf
                 cd /tmp
                 ./script_uninstall_apigateway.sh
 }
