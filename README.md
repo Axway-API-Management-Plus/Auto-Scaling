@@ -136,4 +136,4 @@ Apache License 2.0 (refer to document [license] (/LICENSE))
 [Overview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AUTO%20SCALING.jpg "Auto Scaling Overview"
 [APIGWOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/APIGatewayAutoScaling.jpg  "APIGW AUTO SCALE OVERVIEW"
 [Axwaylogo]: https://github.com/Axway-API-Management/Common/blob/master/img/AxwayLogoSmall.png  "Axway logo"
-[ANMOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AdminNodeManagerHA.jpg  "ANM HA Overview"
+[ANMOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AdminNodeManagerHA.jpg "ANM HA Overview"
