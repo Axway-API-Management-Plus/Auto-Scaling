@@ -38,7 +38,7 @@ User Administration
 
 #### Admin Node Manager Auto Scaling Architecture Overview 
 
-![alt text][ANMOverview] High Level Overview of Admin Node Manager HA Setup
+![alt text][ANMOverview]
 
 **While configuring Elastic Load Balancer incorporate following**
  
@@ -73,7 +73,7 @@ User Administration
 ### API Gateway Subnet
 Is API consumer facing subnet exposing API Gateway listeners expecting to take API traffic. The subnet is auto scaled with auto scaling triggers relying on SNS alerts.
 
-![alt text][APIGWOverview] High Level Overview of Admin Node Manager HA Setup
+![alt text][APIGWOverview]
 
 ## Install
 ```
@@ -117,7 +117,9 @@ The scripts have been verified on Amazon Linux and hence for any other Unix flav
 ## Bug and Caveats
 
 ```
-This script SHOULD NOT be used more than once for a given message
+1. Avoid adding/deleting more than one API Gateway instances simultaneously in  auto scaling activities, bigger size might lead to a race condition resulting in inconsistent topology. Any such occurrence will be mostly taken care by ELB which marks the instances as unhealthy and auto scaling group replaces it with healthy node
+2. During scale down opsdb logs are lost - there might be a possible way to move them to other servers
+3. Distributed cache don't work well with auto scaled instances. There are few workarounds i am exploring to solve the caching problem.
 ```
 
 ## Contributing
@@ -134,6 +136,6 @@ Apache License 2.0 (refer to document [license] (/LICENSE))
 
 [ANMINIT]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/src/AdminNodeManager/script_ANM_init.sh
 [Overview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AUTO%20SCALING.jpg "Auto Scaling Overview"
-[APIGWOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/APIGatewayAutoScaling.jpg  "APIGW AUTO SCALE OVERVIEW"
+[APIGWOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/APIGatewayAutoScaling.png  "APIGW AUTO SCALE OVERVIEW"
 [Axwaylogo]: https://github.com/Axway-API-Management/Common/blob/master/img/AxwayLogoSmall.png  "Axway logo"
-[ANMOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AdminNodeManagerHA.jpg "ANM HA Overview"
+[ANMOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AdminNodeManagerHA.png "ANM HA Overview"
