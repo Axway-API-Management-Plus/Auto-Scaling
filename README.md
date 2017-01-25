@@ -1,7 +1,7 @@
 # Auto-Scaling
 Scripts to implement auto scaling in AWS.
 
-![alt text][Overview] High Level Overview
+![alt text][Overview]
 
 # Description
 
@@ -133,7 +133,7 @@ Please read [Contributing.md] (https://github.com/Axway-API-Management/Common/bl
 Apache License 2.0 (refer to document [license] (/LICENSE))
 
 [ANMINIT]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/src/AdminNodeManager/script_ANM_init.sh
-[Overview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/images/AUTO%20SCALING.jpg  "Auto Scaling Overview"
-[APIGWOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/images/APIGatewayAutoScaling.jpg  "APIGW AUTO SCALE OVERVIEW"
+[Overview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AUTO%20SCALING.jpg "Auto Scaling Overview"
+[APIGWOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/APIGatewayAutoScaling.jpg  "APIGW AUTO SCALE OVERVIEW"
 [Axwaylogo]: https://github.com/Axway-API-Management/Common/blob/master/img/AxwayLogoSmall.png  "Axway logo"
-[ANMOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/images/AdminNodeManagerHA.jpg  "ANM HA Overview"
+[ANMOverview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AdminNodeManagerHA.jpg  "ANM HA Overview"
