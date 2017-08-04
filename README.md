@@ -125,7 +125,7 @@ The scripts have been verified on Amazon Linux and hence for any other Unix flav
 
 ## Contributing
 
-Please read [Contributing.md] (https://github.com/Axway-API-Management/Common/blob/master/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [Contributing.md](https://github.com/Axway-API-Management/Common/blob/master/Contributing.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Team
@@ -133,7 +133,7 @@ Please read [Contributing.md] (https://github.com/Axway-API-Management/Common/bl
 ![alt text][Axwaylogo] Axway Team
 
 ## License
-Apache License 2.0 (refer to document [license] (/LICENSE))
+[Apache License 2.0](/LICENSE))
 
 [ANMINIT]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/src/AdminNodeManager/script_ANM_init.sh
 [Overview]: https://github.com/Axway-API-Management-Plus/Auto-Scaling-/blob/master/docs/Images/AUTO%20SCALING.jpg "Auto Scaling Overview"
